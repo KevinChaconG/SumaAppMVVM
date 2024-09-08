@@ -2,13 +2,14 @@ using SumaAppMVVM.ViewModels;
 
 namespace SumaAppMVVM.Views;
 
-public partial class SumaAppView : ContentView
+public partial class SumaAppMVVM : ContentPage
 {
+
 	private SumaAppViewModel ViewModel;
-	public SumaAppView()
+	public SumaAppMVVM()
 	{
 		InitializeComponent();
-		ViewModel = new SumaAppViewModel ViewModel;
+		ViewModel = new SumaAppViewModel();
 		BindingContext = ViewModel;
 	}
 }

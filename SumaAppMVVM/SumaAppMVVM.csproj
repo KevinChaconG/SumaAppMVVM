@@ -64,7 +64,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\SumaAppView.xaml">
+	  <MauiXaml Update="Views\SumaAppMVVM.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -1,4 +1,7 @@
-﻿namespace SumaAppMVVM
+﻿using SumaAppMVVM.ViewModels;
+using SumaAppMVVM.Views;
+
+namespace SumaAppMVVM
 {
     public partial class App : Application
     {
@@ -6,7 +9,7 @@
         {
             InitializeComponent();
 
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(new Views.SumaAppMVVM());
         }
     }
 }

@@ -3,7 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 
 namespace SumaAppMVVM.ViewModels
 {
-    public partial class SumaAppViewModels : ObservableObject
+    public partial class SumaAppViewModel : ObservableObject
     {
         [ObservableProperty]
         private double num1;
@@ -21,7 +21,8 @@ namespace SumaAppMVVM.ViewModels
 
         [RelayCommand]
         private void Calcular()
-        { 
+        {
+            Alerta("Operacion", "Se ejecutó el comando Calcular");
             resultado = num1 + num2;
 
         }
@@ -29,9 +30,11 @@ namespace SumaAppMVVM.ViewModels
         [RelayCommand]
         private void Limpiar()
         {
+            Alerta("Operacion", "Se ejecutó el comando Limpiar");
             num1 = 0;
             num2 = 0;
             resultado = 0;
         }
+
     }
 }
