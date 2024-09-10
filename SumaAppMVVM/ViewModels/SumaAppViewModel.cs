@@ -6,13 +6,13 @@ namespace SumaAppMVVM.ViewModels
     public partial class SumaAppViewModel : ObservableObject
     {
         [ObservableProperty]
-        private double num1;
+        private string num1;
 
         [ObservableProperty]
-        private double num2;
+        private string num2;
 
         [ObservableProperty]
-        private double resultado;
+        private string resultado;
 
         private void Alerta(string Titulo, string Mensaje)
         {
@@ -22,18 +22,17 @@ namespace SumaAppMVVM.ViewModels
         [RelayCommand]
         private void Calcular()
         {
-            Alerta("Operacion", "Se ejecutó el comando Calcular");
-            resultado = num1 + num2;
+            resultado = $"$Texto: {num1}"; // Interpolación de cadenas
+
 
         }
 
         [RelayCommand]
-        private void Limpiar()
+        public void Limpiar()
         {
-            Alerta("Operacion", "Se ejecutó el comando Limpiar");
-            num1 = 0;
-            num2 = 0;
-            resultado = 0;
+            num1 = "";
+            num2 = "";
+            resultado = "";
         }
 
     }

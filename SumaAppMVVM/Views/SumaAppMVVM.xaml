@@ -18,7 +18,7 @@
             <Entry Text="{Binding Resultado}" IsReadOnly="True"/>
 
             <Button Text="Calcular" Command="{Binding CalcularCommand}" BackgroundColor="Green"/>
-            <Button Text="Limpiar" Command="{Binding LimpiarCommand}" BackgroundColor="Red" />
+            <Button Text="Limpiar" Command="{Binding LimpiarCommand}" BackgroundColor="DarkOrange" />
         </VerticalStackLayout>
     </ScrollView>
 
